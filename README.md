@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+#Real-Time Text Analysis and String Replacement
+This is a React web application that allows users to input text, get real-time statistics on the entered text, and perform string replacements dynamically. The app provides the following features:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###Unique Word Count: Case-insensitive unique word counting.
+###Character Count (Excluding Spaces and Punctuation): Excludes spaces and punctuation to count only letters and numbers.
+###String Replacement: Replace all occurrences of a string with another string.
+##Features
+###1. Real-Time Text Statistics
+Unique Word Count: Displays the number of unique words as the user types in the text area. Words are considered case-insensitive, so "Hello" and "hello" are treated as the same word.
+Character Count: Shows the count of characters entered, excluding spaces and punctuation (letters and numbers only).
+###2. String Replacement
+Two input fields are provided for string replacement:
+Input 1: The string you want to search for.
+Input 2: The string you want to replace it with.
+A "Replace All" button replaces all occurrences of the first string with the second string in the textarea.
+The replacement is case-sensitive.
+##Demo
+A live demo of the application can be found here.
 
-## Available Scripts
+Installation
+Prerequisites
+Node.js installed on your system.
+Steps
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/your-username/text-analysis-replacement-app.git
+Navigate into the project directory:
 
-### `npm start`
+bash
+Copy code
+cd text-analysis-replacement-app
+Install the required dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm install
+Start the development server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm start
+The app will be available at http://localhost:3000.
 
-### `npm test`
+Usage
+Type or paste text into the provided textarea.
+View real-time statistics:
+Unique Word Count is updated as you type.
+Character Count shows the number of characters (excluding spaces and punctuation).
+For string replacement:
+Enter the string to be replaced in the first input field.
+Enter the replacement string in the second input field.
+Click the Replace All button to replace all occurrences of the string in the textarea.
+Project Structure
+java
+Copy code
+├── public
+│   └── index.html
+├── src
+│   ├── components
+│   │   └── TextAnalysis.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+└── package.json
+TextAnalysis.js: Contains the core logic for real-time statistics and string replacement.
+App.js: The main entry point for the application.
+styles.css: Contains the CSS for styling the textarea and input fields.
+Technologies Used
+React.js - For building the user interface.
+CSS - For styling the components.
+How It Works
+Text Analysis:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app listens to user input in the textarea and calculates the unique word count and character count in real-time.
+Regular expressions are used to filter out spaces, punctuation, and ensure case-insensitivity.
+String Replacement:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The user enters the string to find and replace in two separate input fields.
+Upon clicking the "Replace All" button, all occurrences of the first string are replaced by the second string in the textarea using JavaScript’s replaceAll method.
